@@ -24,6 +24,7 @@
 var VNode = require("virtual-dom/vnode/vnode")
   , VText = require("virtual-dom/vnode/vtext")
   , VComment = require("./vcomment")
+  , hasOwnProp = require("has-own-prop");
 
 module.exports = createVNode
 
@@ -105,7 +106,7 @@ function getElementProperties(el) {
         }
       } else { // IE8
         for (var styleProp in el.style) {
-          if (el.style[styleProp] && el.style.hasOwnProperty(styleProp)) {
+          if (el.style[styleProp] && hasOwnProp(el.style, styleProp)) {
             css[styleProp] = el.style[styleProp];
           }
         }

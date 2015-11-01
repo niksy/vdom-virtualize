@@ -26,5 +26,8 @@
   "bugs": {
     "url": "https://github.com/marcelklehr/vdom-virtualize/issues"
   },
-  "homepage": "https://github.com/marcelklehr/vdom-virtualize"
+  "homepage": "https://github.com/marcelklehr/vdom-virtualize",
+  "dependencies": {
+    "has-own-prop": "^1.0.0"
+  }
 }
